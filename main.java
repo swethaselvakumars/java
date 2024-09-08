@@ -1,10 +1,25 @@
-package oops.inheritance;
+package abstraction;
+
+abstract class annapoorna{
+    annapoorna(){
+        System.out.println("default");
+    }
+    public void chef(){
+       System.out.println("rosemilk");
+    }
+
+    abstract public void watchman();
+}
+
+class devteam extends annapoorna{
+      public void watchman(){
+        System.out.println("proble sloved");
+      }
+}
 
 public class main {
-    public static void main(String []args){
-        class3 obj3=new class3();
-        obj3.parent();
-        obj3.child2();
-        obj3.child1();
+    public static void main(){
+       devteam devobj=new devteam();
+       devobj.watchman();
     }
 }
